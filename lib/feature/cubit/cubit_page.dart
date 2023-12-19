@@ -1,11 +1,11 @@
 import 'package:flutter/material.dart';
-import 'package:state_mangement_bloc/feature/cubit/count_cubit.dart';
-import 'package:state_mangement_bloc/feature/cubit/count_stream_cubit.dart';
+import 'package:state_mangement_bloc/feature/cubit/control/control_cubit.dart';
+import 'package:state_mangement_bloc/feature/cubit/control/stream_cubit.dart';
 
-class MyCubitApp extends StatelessWidget {
-  final CounterCubit myCounterCubit = CounterCubit(initialData: 0);
+class CubitPage extends StatelessWidget {
+  final ControlCubit myCounterCubit = ControlCubit(initialData: 0);
 
-   MyCubitApp({super.key});
+   CubitPage({super.key});
 
   @override
   Widget build(BuildContext context) {

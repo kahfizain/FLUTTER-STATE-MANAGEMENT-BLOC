@@ -1,7 +1,7 @@
 import 'package:bloc/bloc.dart';
 
-class CounterObserverCubit extends Cubit<int> {
-  CounterObserverCubit({this.initialData = 0}) : super(initialData);
+class ControlObserverCubit extends Cubit<int> {
+  ControlObserverCubit({this.initialData = 0}) : super(initialData);
 
   int initialData;
   int? current;

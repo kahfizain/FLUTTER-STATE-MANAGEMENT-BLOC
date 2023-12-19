@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:state_mangement_bloc/feature/cubit/count_cubit.dart';
-import 'package:state_mangement_bloc/feature/observer_cubit/count_observer_cubit.dart';
+import 'package:state_mangement_bloc/feature/cubit/control/control_cubit.dart';
+import 'package:state_mangement_bloc/feature/observer_cubit/control/control_observer_cubit.dart';
 
-Widget countStreamObserverCubit(Stream<int> stream, final CounterObserverCubit observerCubit) {
+Widget countStreamObserverCubit(Stream<int> stream, final ControlObserverCubit observerCubit) {
   return StreamBuilder(
       initialData: observerCubit.initialData,
       stream: stream,

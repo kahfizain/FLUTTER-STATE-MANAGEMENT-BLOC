@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:state_mangement_bloc/feature/stream/count_stream_builder.dart';
+import 'package:state_mangement_bloc/feature/stream/stream_builder.dart';
 
-class MyStream extends StatelessWidget {
+class StreamPage extends StatelessWidget {
 
   Stream<int> countStream() async* {
     for (int i = 1; i <= 10; i++) {
@@ -9,7 +9,8 @@ class MyStream extends StatelessWidget {
       yield i;
     }
   }
-  const MyStream({super.key});
+
+  const StreamPage({super.key});
 
   @override
   Widget build(BuildContext context) {
