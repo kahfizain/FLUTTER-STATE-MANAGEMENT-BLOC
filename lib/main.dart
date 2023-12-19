@@ -1,6 +1,6 @@
 
 import 'package:flutter/material.dart';
-import 'package:state_mangement_bloc/feature/bloc_builder/my_bloc_builder.dart';
+import 'package:state_mangement_bloc/feature/bloc_builder/bloc_builder_page.dart';
 import 'package:state_mangement_bloc/feature/cubit/cubit_page.dart';
 import 'package:state_mangement_bloc/feature/observer_cubit/observer_cubit_page.dart';
 import 'package:state_mangement_bloc/feature/stream/stream_page.dart';
