@@ -1,6 +1,7 @@
 
 import 'package:flutter/material.dart';
 import 'package:state_mangement_bloc/feature/cubit/my_cubit.dart';
+import 'package:state_mangement_bloc/feature/observer_cubit/my_observer_cubit.dart';
 import 'package:state_mangement_bloc/feature/stream/my_stream.dart';
 
 void main() {
@@ -14,7 +15,7 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return  MaterialApp(
-      home: MyCubitApp(),
+      home: MyObserverCubitApp(),
     );
   }
 }
