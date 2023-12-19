@@ -1,7 +1,8 @@
 import 'package:flutter/material.dart';
 
-Widget countStreamBuilder(Stream<int> stream) {
+Widget countStreamCubit(Stream<int> stream) {
 
+  print("bulid");
   return StreamBuilder(
       stream: stream,
       builder: ( context,  snapshot) {
