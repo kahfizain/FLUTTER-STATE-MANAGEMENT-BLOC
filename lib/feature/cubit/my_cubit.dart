@@ -3,7 +3,7 @@ import 'package:state_mangement_bloc/feature/cubit/count_cubit.dart';
 import 'package:state_mangement_bloc/feature/cubit/count_stream_cubit.dart';
 
 class MyCubitApp extends StatelessWidget {
-  final CounterCubit myCounterCubit = CounterCubit();
+  final CounterCubit myCounterCubit = CounterCubit(initialData: 0);
 
    MyCubitApp({super.key});
 
@@ -18,7 +18,7 @@ class MyCubitApp extends StatelessWidget {
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
             Center(
-              child: countStreamCubit(myCounterCubit.stream),
+              child: countStreamCubit(myCounterCubit.stream,myCounterCubit),
             ),
             const SizedBox(height: 20),
             Row(
