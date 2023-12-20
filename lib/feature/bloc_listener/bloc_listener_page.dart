@@ -1,13 +1,13 @@
 import 'package:flutter/material.dart';
-import 'package:state_mangement_bloc/feature/bloc_builder/controller/controller_bloc.dart';
-import 'package:state_mangement_bloc/feature/bloc_builder/controller/counter_bloc_builder.dart';
+import 'package:state_mangement_bloc/feature/bloc_listener/controller/controller_bloc_listener.dart';
+import 'package:state_mangement_bloc/feature/bloc_listener/controller/counter_bloc_listener.dart';
 
 
-class BlocBuilderPage extends StatelessWidget {
-  final ControlBloc controlBloc =
-  ControlBloc(init: 0);
+class BlocListenerPage extends StatelessWidget {
+  final ControlBlocListener controlBlocListener =
+  ControlBlocListener(init: 0);
 
-  BlocBuilderPage({super.key});
+  BlocListenerPage({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -20,7 +20,7 @@ class BlocBuilderPage extends StatelessWidget {
         children: [
           Center(
             child:
-            counterBlocBuilder(controlBloc.stream, controlBloc),
+            counterBlocListener(controlBlocListener.stream, controlBlocListener),
           ),
           const SizedBox(height: 20),
           Row(
@@ -28,13 +28,13 @@ class BlocBuilderPage extends StatelessWidget {
             children: [
               IconButton(
                 onPressed: () {
-                  controlBloc.removeData();
+                  controlBlocListener.removeData();
                 },
                 icon: const Icon(Icons.remove),
               ),
               IconButton(
                 onPressed: () {
-                  controlBloc.addData();
+                  controlBlocListener.addData();
                 },
                 icon: const Icon(Icons.add),
               ),

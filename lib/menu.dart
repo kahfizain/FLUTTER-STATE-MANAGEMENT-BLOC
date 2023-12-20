@@ -101,6 +101,26 @@ class Menu extends StatelessWidget {
                 style:  TextStyle(color: Color(0xFF747D8C)),
               ),
             ),
+
+            const SizedBox(height: 30),
+            ElevatedButton(
+              onPressed: () {
+                // Your onPressed logic here
+                Navigator.push(
+                    context, MaterialPageRoute(builder: (context) =>  BlocBuilderPage()));
+              },
+              style: ElevatedButton.styleFrom(
+                primary: Colors.grey[300],
+                fixedSize: const Size(150, 50),
+                shape: RoundedRectangleBorder(
+                  borderRadius: BorderRadius.circular(7.0), // Set your preferred radius
+                ),
+              ),
+              child: const Text(
+                "BLOC LISTENER",
+                style:  TextStyle(color: Color(0xFF747D8C)),
+              ),
+            ),
           ],
         ),
       ),

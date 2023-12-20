@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:state_mangement_bloc/feature/cubit/control/control_cubit.dart';
-import 'package:state_mangement_bloc/feature/cubit/control/stream_cubit.dart';
+import 'package:state_mangement_bloc/feature/cubit/controller/control_cubit.dart';
+import 'package:state_mangement_bloc/feature/cubit/controller/stream_cubit.dart';
 
 class CubitPage extends StatelessWidget {
   final ControlCubit myCounterCubit = ControlCubit(initialData: 0);

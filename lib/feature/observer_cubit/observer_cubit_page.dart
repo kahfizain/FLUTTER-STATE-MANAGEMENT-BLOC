@@ -1,8 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:state_mangement_bloc/feature/cubit/control/control_cubit.dart';
-import 'package:state_mangement_bloc/feature/cubit/control/stream_cubit.dart';
-import 'package:state_mangement_bloc/feature/observer_cubit/control/control_observer_cubit.dart';
-import 'package:state_mangement_bloc/feature/observer_cubit/control/stream_observer_cubit.dart';
+import 'package:state_mangement_bloc/feature/observer_cubit/controller/controller_observer_cubit.dart';
+import 'package:state_mangement_bloc/feature/observer_cubit/controller/stream_observer_cubit.dart';
 
 class ObserverCubitPage extends StatelessWidget {
   final ControlObserverCubit myCounterCubit =
