@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:state_mangement_bloc/feature/bloc_builder/bloc_builder_page.dart';
+import 'package:state_mangement_bloc/feature/bloc_listener/bloc_listener_page.dart';
 import 'package:state_mangement_bloc/feature/cubit/cubit_page.dart';
 import 'package:state_mangement_bloc/feature/observer_cubit/observer_cubit_page.dart';
 import 'package:state_mangement_bloc/feature/stream/stream_page.dart';
@@ -107,7 +108,7 @@ class Menu extends StatelessWidget {
               onPressed: () {
                 // Your onPressed logic here
                 Navigator.push(
-                    context, MaterialPageRoute(builder: (context) =>  BlocBuilderPage()));
+                    context, MaterialPageRoute(builder: (context) =>  BlocListenerPage()));
               },
               style: ElevatedButton.styleFrom(
                 primary: Colors.grey[300],

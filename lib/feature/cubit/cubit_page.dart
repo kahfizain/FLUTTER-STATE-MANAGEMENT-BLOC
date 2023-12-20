@@ -9,6 +9,7 @@ class CubitPage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    print("build");
     return Scaffold(
       appBar: AppBar(
         title: const Text("Cubit Aps"),
