@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:state_mangement_bloc/feature/bloc_builder/bloc_builder_page.dart';
+import 'package:state_mangement_bloc/feature/bloc_consumer/bloc_consumer_page.dart';
 import 'package:state_mangement_bloc/feature/bloc_listener/bloc_listener_page.dart';
 import 'package:state_mangement_bloc/feature/cubit/cubit_page.dart';
 import 'package:state_mangement_bloc/feature/observer_cubit/observer_cubit_page.dart';
@@ -119,6 +120,26 @@ class Menu extends StatelessWidget {
               ),
               child: const Text(
                 "BLOC LISTENER",
+                style:  TextStyle(color: Color(0xFF747D8C)),
+              ),
+            ),
+
+            const SizedBox(height: 30),
+            ElevatedButton(
+              onPressed: () {
+                // Your onPressed logic here
+                Navigator.push(
+                    context, MaterialPageRoute(builder: (context) =>  BlocConsumerPage()));
+              },
+              style: ElevatedButton.styleFrom(
+                primary: Colors.grey[300],
+                fixedSize: const Size(150, 50),
+                shape: RoundedRectangleBorder(
+                  borderRadius: BorderRadius.circular(7.0), // Set your preferred radius
+                ),
+              ),
+              child: const Text(
+                "BLOC CONSUMER",
                 style:  TextStyle(color: Color(0xFF747D8C)),
               ),
             ),

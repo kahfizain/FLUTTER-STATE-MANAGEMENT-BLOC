@@ -1,13 +1,18 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:state_mangement_bloc/feature/bloc_listener/controller/controller_bloc_listener.dart';
+import 'package:state_mangement_bloc/feature/bloc_consumer/controller/controller_bloc_consumer.dart';
 
-import 'counter_bloc_builder.dart';
 
-Widget counterBlocListener(
-    Stream<int> stream, final ControlBlocListener controlBlocListener) {
-  return BlocListener<ControlBlocListener, int>(
-    bloc: controlBlocListener,
+Widget counterBlocConsumer(
+    Stream<int> stream, final ControlBlocConsumer controlBlocConsumer) {
+  return BlocConsumer<ControlBlocConsumer, int>(
+    bloc: controlBlocConsumer,
+    builder: (context, state) {
+      return Text(
+        "$state",
+        style: const TextStyle(fontSize: 50),
+      );
+    },
     listener: (context, state) {
       ScaffoldMessenger.of(context).showSnackBar(
         const SnackBar(
@@ -18,12 +23,11 @@ Widget counterBlocListener(
     },
     listenWhen: (previous, current) {
       //todo ini kondisi menampilkan data genap
-      if (current %2 == 0) {
+      if (current % 2 == 0) {
         return true;
       } else {
         return false;
       }
     },
-    child: counterBlocBuilder(controlBlocListener.stream, controlBlocListener),
   );
 }
